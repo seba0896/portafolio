@@ -1,8 +1,8 @@
 {
-  "name": "portafolio",
+  "name": "Sebastián González R.",
   "version": "1.0.0",
   "private": true,
-  "description": "portafolio",
+  "description": "Sebastián González R. - Portafolio",
   "author": "Sebastian Gonzalez R.",
   "keywords": [
     "gatsby"
@@ -16,6 +16,9 @@
   },
   "dependencies": {
     "gatsby": "^4.24.3",
+    "gatsby-plugin-image": "^2.24.0",
+    "gatsby-plugin-sharp": "^4.24.0",
+    "gatsby-source-filesystem": "^4.24.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   }
