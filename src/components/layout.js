@@ -1,5 +1,5 @@
 import * as React from "react"
-import Header from "./header"
+import Header from "./partials/header"
 
 import { container } from './layout.module.css'
 import Scripts from "./scripts"

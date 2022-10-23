@@ -1,0 +1,193 @@
+/* ================================ */
+/* =======Portafolio Styles======== */
+/* ================================ */
+
+.portafolio-acerca{
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+  }
+  
+  .acerca-content{
+    width: 50%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .4rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+  }
+  
+  .acerca-content h3{
+    color: #00ada0;
+    margin-bottom: 1rem;
+  }
+  
+  
+  .acerca-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+  
+  .acerca-img img{
+    border-radius: 50%;
+  }
+
+  /* ===================================== */
+  /* ======Fin Portafolio Acerca========== */
+  /* ===================================== */
+
+
+  /* ===================================== */
+  /* ======Portafolio Servicios=========== */
+  /* ===================================== */
+  
+.portafolio-servicios{
+    background-color: #eee;
+    padding: 4rem;
+ }
+    
+.portafolio-servicios-title{
+    padding-bottom: 1rem;
+}
+.portafolio-servicios-title h2{
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: #00ada0;
+}
+    
+.portafolio-servicios .cards-container{
+    display: flex;
+    justify-content: space-around;
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.portafolio-servicios .cards-container .card{
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .4rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    background-color: #fff;
+}
+    
+.portafolio-servicios .cards-container .card:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    left: 100%;
+    bottom: 4rem;
+    padding: .2rem;
+    width: 100%;
+    background-color: turquoise;
+}
+    
+.portafolio-servicios .cards-container .card:nth-child(2){
+    margin-top: 5rem;
+}
+.portafolio-servicios .cards-container .card:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 12rem;
+    padding: .2rem;
+    width: 100%;
+    background-color: turquoise;
+}
+.portafolio-servicios .cards-container .card:nth-child(3){
+    margin-top: 10rem;
+}
+.portafolio-servicios .cards-container .card .card-img{
+    font-weight: bold;
+}
+.portafolio-servicios .cards-container .card h3{
+    color: turquoise;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.portafolio-servicios .cards-container .card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: -1.5rem;
+    margin-left: .5rem;
+    border-radius: 50% !important;
+    border: medium solid#00ada0;
+    background-color: #fff;
+}
+
+.card-content ul{
+    list-style: circle;
+}
+
+.card-content ul li::marker{
+    color: #00ada0;
+}
+
+/* ===================================== */
+/* ======Fin Portafolio Servicios======= */
+/* ===================================== */
+
+
+/* ===================================== */
+/* ==========Medias queries============= */
+/* ===================================== */
+
+
+@media screen and ((min-width: 768px) and (max-width: 991px) ) {
+    .portafolio-servicios .cards-container{
+        background-color: steelblue;
+    }
+    
+}
+@media screen and ((min-width: 992px) and (max-width: 1440px) ) {
+    .portafolio-servicios .cards-container .card{
+        position: relative;
+        width: 50%;
+        height: auto;
+       /*  margin: 1rem; */
+        padding: 1rem;
+        border-radius: .4rem;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);  
+        background-color: #fff;
+    }
+        
+    .portafolio-servicios .cards-container .card:nth-child(1)::after{
+        content: '';
+        position: absolute;
+        left: 100%;
+        bottom: 4rem;
+        padding: .2rem;
+        width: 100%;
+        background-color: turquoise;
+    }
+        
+    .portafolio-servicios .cards-container .card:nth-child(1){
+        margin-top: 0;
+    }
+    .portafolio-servicios .cards-container .card:nth-child(2){
+        margin-top: 0;
+    }
+    .portafolio-servicios .cards-container .card:nth-child(2)::after{
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 12rem;
+        padding: .2rem;
+        width: 100%;
+        background-color: turquoise;
+    }
+    .portafolio-servicios .cards-container .card:nth-child(3){
+        margin-top: 0;
+    }
+    
+}

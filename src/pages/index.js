@@ -3,9 +3,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
-import { imgFondo, banner } from '../components/layout.module.css'
-
-import anime from 'animejs'
+import { imgFondo, banner, imgBanner, bannerEtiqueta } from '../components/layout.module.css'
 
 const IndexPage = () => {
  
@@ -21,9 +19,14 @@ const IndexPage = () => {
             />
 
           <div className={banner} id="banner">
-            <h2>Sebastián</h2>
-            <h2>González</h2>
-            <h2>Rodríguez</h2>
+            <div className={imgBanner}>
+              <StaticImage src='https://placeimg.com/500/500/people'></StaticImage>
+            </div>
+            <div className={bannerEtiqueta}>
+              <h3>Sebastián González Rodríguez</h3>
+              <hr />
+              <h5>Desarrollador Web</h5>
+            </div>
           </div>
         </Layout> 
       </>
@@ -31,27 +34,5 @@ const IndexPage = () => {
     
   }
 
-  const tl = anime.timeline({
-    targets: "#banner",
-    delay: 2,
-    duration: 500,
-    easing: 'easeOutExpo',
-    direction: 'altarnate',
-    loop: true
-  })
-
-  tl.add({
-    scale: [
-      {value: .4, easing: 'easeOutSine', duration: 500},
-    ],
-    opacity: 0
-  })
-
-  tl.add({
-    scale: [
-      {value: 1, easing: 'easeInOutQuad', duration: 1200}
-    ],
-    opacity: 1
-  })
 export const Head = () => <Seo title='Front Page' />
 export default IndexPage
