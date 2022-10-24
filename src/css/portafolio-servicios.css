@@ -2,41 +2,6 @@
 /* =======Portafolio Styles======== */
 /* ================================ */
 
-.portafolio-acerca{
-    display: flex;
-    justify-content: space-around;
-    padding: 4rem;
-  }
-  
-  .acerca-content{
-    width: 50%;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: .4rem;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
-  }
-  
-  .acerca-content h3{
-    color: #00ada0;
-    margin-bottom: 1rem;
-  }
-  
-  
-  .acerca-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-  }
-  
-  .acerca-img img{
-    border-radius: 50%;
-  }
-
-  /* ===================================== */
-  /* ======Fin Portafolio Acerca========== */
-  /* ===================================== */
-
 
   /* ===================================== */
   /* ======Portafolio Servicios=========== */
@@ -142,13 +107,56 @@
 /* ==========Medias queries============= */
 /* ===================================== */
 
+@media screen and ((min-width: 100px) and (max-width: 767px) ) {
+    
 
+    .portafolio-servicios{
+       padding: .4rem;
+    }
+    .portafolio-servicios .cards-container{
+        width: 100% !important;
+        padding: .5rem;
+        flex-direction: column;
+    }
+    .portafolio-servicios .cards-container .card{
+        width: 100%;
+        margin: 0 !important;
+        margin-top: 1.8rem !important;
+    }
+
+    .portafolio-servicios .cards-container .card:nth-child(1)::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0;
+        width: 0;
+        background-color: #00ada0;
+    }
+    .portafolio-servicios .cards-container .card:nth-child(2)::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0;
+        width: 0;
+        background-color: #00ada0;
+    }
+
+    .portafolio-servicios .portafolio-servicios-title{
+        margin-top: 2rem;
+    }
+    
+}
 @media screen and ((min-width: 768px) and (max-width: 991px) ) {
+    
+
     .portafolio-servicios .cards-container{
         background-color: steelblue;
     }
     
 }
+
 @media screen and ((min-width: 992px) and (max-width: 1440px) ) {
     .portafolio-servicios .cards-container .card{
         position: relative;

@@ -1,0 +1,25 @@
+.servicios{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.servicios .cards-container{
+    width: 30%;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: .4rem;
+    box-shadow: 1px 2px 1px 1px rgba(0,0,0, .2);
+}
+.servicios .cards-container h2{
+ color: #00ada0;
+}
+
+@media screen and ((min-width: 100px) and (max-width: 767px) ) {
+    
+    .servicios .cards-container{
+        width: 100%;
+    }
+    
+}

@@ -2,8 +2,9 @@ import * as React from 'react';
 import Layout from '../../components/layout'
 import Footer from '../../components/partials/footer';
 import Seo from '../../components/seo';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
+import '../../css/servicios.css'
 
 const Servicios = ( { data } ) => {
 
@@ -11,14 +12,16 @@ const Servicios = ( { data } ) => {
         <>
             <Layout pageTitle='Servicios'>
 
+                <section className='servicios'>
                     {
                         data.allMdx.nodes.map( node => (
-                            <div>
-                                <h2> {node.frontmatter.title} </h2>
-                                <p> { node.frontmatter.content } </p>
-                            </div>
+                               <div className='cards-container'>
+                                    <h2> {node.frontmatter.title} </h2>
+                                    <p> { node.frontmatter.content } <Link to={node.frontmatter.slug}>{node.frontmatter.mas}</Link> </p>
+                               </div>
                         ))
                     }
+                    </section>
                 
             </Layout>
             <Footer />
@@ -29,11 +32,16 @@ const Servicios = ( { data } ) => {
 
 export const data = graphql`
     query{
-        allMdx(filter: {frontmatter: {parent: {eq: "servicios"}}}) {
+        allMdx(
+            filter: {frontmatter: {parent: {eq: "servicios"}}}
+            sort: {order: ASC, fields: frontmatter___date}
+        ) {
             nodes {
             frontmatter {
                 title
                 content
+                mas
+                slug
                 }
             }
         }

@@ -1,0 +1,55 @@
+
+.portafolio-acerca{
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+  }
+  
+  .acerca-content{
+    width: 50%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .4rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+  }
+  
+  .acerca-content h3{
+    color: #00ada0;
+    margin-bottom: 1rem;
+  }
+  
+  
+  .acerca-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+  
+  .acerca-img img{
+    border-radius: 50%;
+  }
+
+  /* ===================================== */
+  /* ======Fin Portafolio Acerca========== */
+  /* ===================================== */
+
+
+
+  @media screen and ((min-width: 100px) and (max-width: 767px) ) {
+    
+
+    .portafolio-acerca{
+        flex-direction: column-reverse;  
+        align-items: center;      
+        padding: 1rem;
+    }
+    .portafolio-acerca .acerca-content{ 
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .portafolio-acerca .acerca-img{ 
+        width: 60%;
+    }
+    
+}

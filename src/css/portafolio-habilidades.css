@@ -75,3 +75,38 @@
 /* ===================================== */
 /* ======Fin Portafolio Servicios======= */
 /* ===================================== */
+
+@media screen and ((min-width: 100px) and (max-width: 767px) ) {
+
+    .portafolio-habilidades{
+        padding: 0;
+     }
+    
+    
+    .portafolio-habilidades .cards-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+    .portafolio-habilidades .cards-container .card{
+        width: 100%;
+        margin: 0;
+        margin-top: 2rem;
+        padding: .5rem;
+    }
+
+    .portafolio-habilidades .cards-container .card:nth-child(1)::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0;
+        width: 0;
+    }
+
+    .portafolio-habilidades .portafolio-habilidades-title h2{
+        margin-top: 2rem;
+    }
+    
+}

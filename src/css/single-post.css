@@ -1,0 +1,15 @@
+.single-post{
+
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: .4rem;
+    box-shadow: 1px 1px 1px 1px #00ada080;
+}
+
+.single-post h2{
+    color: #00ada0;
+}

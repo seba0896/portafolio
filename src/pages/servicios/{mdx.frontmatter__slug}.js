@@ -5,6 +5,8 @@ import Seo from '../../components/seo';
 
 import { graphql, navigate } from 'gatsby';
 
+import  '../../css/single-post.css'
+
 
 const SingleServicio = ( { data } ) => {
    /*  if(data.mdx === null){
@@ -14,7 +16,10 @@ const SingleServicio = ( { data } ) => {
     return(
         <>
             <Layout>
-                <h2>{ data.mdx.frontmatter.title }</h2>
+                <section className='single-post'>
+                    <h2>{ data.mdx.frontmatter.title }</h2>
+                    <p>{ data.mdx.frontmatter.singleContent }</p>
+                </section>
             </Layout>
             <Footer />
         </>
@@ -26,6 +31,7 @@ export const data = graphql`
         mdx(id: {eq: $id}, frontmatter: {parent: {eq: "servicios" }}) {
             frontmatter {
               title
+              singleContent
               parent
             }
             
@@ -33,6 +39,6 @@ export const data = graphql`
     }
 `
 
-export const Head = () => <Seo title='Single Post'/>
+export const Head = () => <Seo title='post'/>
 
 export default SingleServicio

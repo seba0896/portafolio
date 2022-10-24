@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../seo';
-import { portafolioAcerca, acercaContent, acercaImg } from '../../components/layout.module.css'
 import { Link } from 'gatsby';
+import '../../css/portafolio-acerca.css'
 
 
 
@@ -10,8 +10,8 @@ const PortafolioAcerca = () => {
 
     return(
         <>
-            <section className={portafolioAcerca}>
-                <article className={acercaContent}>
+            <section className='portafolio-acerca'>
+                <article className='acerca-content'>
                     <h3>¿Quién Soy?</h3>
                     <hr />
                     <p>
@@ -19,7 +19,7 @@ const PortafolioAcerca = () => {
                     </p>
                     <strong>¡Trabajemos juntos...!</strong>
                 </article>
-                <div className={acercaImg}>
+                <div className='acerca-img'>
                     <StaticImage  src='https://placeimg.com/400/400/people'/>
                 </div>
             </section>
